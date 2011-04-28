@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name        = "activemdb"
   s.version     = ActiveMDB::Version
   s.platform    = Gem::Platform::RUBY
-  s.authors     = [Matthew King"]
+  s.authors     = ["Matthew King"]
   s.email       = "automatthew@gmail.com"
   s.homepage    = "https://github.com/automatthew/activemdb"
   s.summary     = "activemdb-#{ActiveMDB::Version}"
