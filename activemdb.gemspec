@@ -5,7 +5,7 @@ require "active_mdb"
 
 Gem::Specification.new do |s|
   s.name        = "activemdb"
-  s.version     = ActiveMDB::Version
+  s.version     = ActiveMDB::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Matthew King"]
   s.email       = "automatthew@gmail.com"
