@@ -15,7 +15,6 @@ load 'active_mdb/base.rb'
 gem 'fastercsv'
 require 'faster_csv'
 
-Inflector = ActiveSupport::Inflector
 
 
 
