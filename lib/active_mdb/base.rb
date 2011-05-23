@@ -6,7 +6,12 @@ module ActiveMDB
       @attributes = attributes unless attributes.nil?
     end
     
-    cattr_accessor :pluralize_table_names, :instance_writer => false
+    def self.pluralize_table_names=(anything)
+      @@pluralize_table_names = anything
+    end
+    def pluralize_table_names
+      @@pluralize_table_names
+    end
     @@pluralize_table_names = true
     
     class << self # Class methods

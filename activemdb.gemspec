@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Matthew King"]
   s.email       = "automatthew@gmail.com"
   s.homepage    = "https://github.com/automatthew/activemdb"
-  s.summary     = "activemdb-#{ActiveMDB::Version}"
+  s.summary     = "activemdb-#{ActiveMDB::VERSION}"
   s.description = "ActiveRecordy wrapper around MDB Tools, allowing POSIX platforms to read MS Access (.mdb) files"
 
   s.rubygems_version   = "1.3.7"

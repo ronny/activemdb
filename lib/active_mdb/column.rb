@@ -18,14 +18,14 @@ class Column
   # Borrowed from ActiveRecord
   def klass
     case type
-      when 'Text', 'Character'  then String
-      when 'Long Integer'       then Fixnum
-      when 'Double'             then Float
-      when 'Currency', 'Float'  then Float
-      when 'DateTime (Short)'   then Time
-      when 'Boolean'            then Object
-      when 'Decimal'            then BigDecimal
-      when 'Binary'             then String
+      when 'Text', 'Character'              then String
+      when 'Long Integer', 'Integer'        then Fixnum
+      when 'Double'                         then Float
+      when 'Currency', 'Float'              then Float
+      when 'DateTime (Short)'               then Time
+      when 'Boolean'                        then Object
+      when 'Decimal'                        then BigDecimal
+      when 'Binary'                         then String
     end
   end
   
