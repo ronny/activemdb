@@ -1,25 +1,26 @@
-# -*- encoding: utf-8 -*-
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'active_mdb/version'
 
-$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
-require "active_mdb"
+Gem::Specification.new do |spec|
+  spec.name          = "activemdb"
+  spec.version       = ActiveMDB::VERSION
+  spec.authors       = ["Matthew King"]
+  spec.email         = ["automatthew@gmail.com"]
+  spec.summary       = "ActiveRecordy wrapper around MDB Tools"
+  spec.description   = "ActiveRecordy wrapper around MDB Tools, allowing POSIX platforms to read MS Access (.mdb) files"
+  spec.homepage      = "https://github.com/automatthew/activemdb"
+  spec.license       = "MIT"
 
-Gem::Specification.new do |s|
-  s.name        = "activemdb"
-  s.version     = ActiveMDB::VERSION
-  s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Matthew King"]
-  s.email       = "automatthew@gmail.com"
-  s.homepage    = "https://github.com/automatthew/activemdb"
-  s.summary     = "activemdb-#{ActiveMDB::VERSION}"
-  s.description = "ActiveRecordy wrapper around MDB Tools, allowing POSIX platforms to read MS Access (.mdb) files"
+  spec.files         = `git ls-files -z`.split("\x0")
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
 
-  s.rubygems_version   = "1.3.7"
-  s.rubyforge_project  = "activemdb"
+  spec.add_development_dependency "bundler", "~> 1.7"
+  spec.add_development_dependency "rake", "~> 10.0"
 
-  s.files            = `git ls-files`.split("\n")
-  s.test_files       = `git ls-files -- {test}/*`.split("\n")
-  s.executables      = []
-  s.extra_rdoc_files = [ "README.txt" ]
-  s.rdoc_options     = ["--charset=UTF-8"]
-  s.require_path     = "lib"
+  spec.add_dependency 'activesupport', '~> 4.1.7'
+  spec.add_dependency 'fastercsv', '~> 1.5.5'
 end

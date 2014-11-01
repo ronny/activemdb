@@ -1,8 +1,5 @@
 $:.unshift(File.dirname(__FILE__))
-module ActiveMDB
-  VERSION = '0.2.3'
-end
-
+require 'active_mdb/version'
 
 require 'rubygems'
 require 'active_support'
@@ -12,9 +9,4 @@ load 'active_mdb/table.rb'
 load 'active_mdb/record.rb'
 load 'active_mdb/column.rb'
 load 'active_mdb/base.rb'
-gem 'fastercsv'
 require 'faster_csv'
-
-
-
-
